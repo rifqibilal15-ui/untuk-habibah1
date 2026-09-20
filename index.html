@@ -1,0 +1,58 @@
+import sys
+import time
+
+
+def slow_type(text, delay=0.04):
+    for char in text:
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        time.sleep(delay)
+    print()
+
+
+def print_heart():
+    heart = [
+        "  ***     ***  ",
+        " *****   ***** ",
+        "******* *******",
+        "***************",
+        " ************* ",
+        "   *********   ",
+        "     *****     ",
+        "       *       ",
+    ]
+    for line in heart:
+        print(line.center(30))
+        time.sleep(0.15)
+
+
+# --- MAIN PROGRAM ---
+print("\n" + "=" * 40)
+print_heart()
+print("=" * 40 + "\n")
+
+slow_type("Dear: Habibah Khoirunnisa Ramadhan ❤️\n", 0.06)
+
+code_lines = [
+    "class LoveStory:",
+    "    def __init__(self):",
+    "        self.someone_special = 'Habibah Khoirunnisa Ramadhan'",
+    "        self.status = 'In Love'",
+    "",
+    "    def express_feelings(self):",
+    "        while True:",
+    "            happiness = float('inf')",
+    "            yield f'Kamu selalu bikin hariku terang, {self.someone_special}! ✨'",
+    "",
+    "my_heart = LoveStory()",
+]
+
+for line in code_lines:
+    slow_type(line, 0.03)
+
+print("\n" + "-" * 40)
+slow_type(
+    "Error: HeartOverflowException! Perasaan ini terlalu besar untuk dikodekan. 💖",
+    0.05,
+)
+print("-" * 40 + "\n")
